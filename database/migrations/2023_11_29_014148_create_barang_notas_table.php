@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('Kode_Nota')->nullable();
             $table->foreign('Kode_Nota')->references('KodeNota')->on('notas')->onDelete("cascade");
-            $table->foreignId('Kode_Kasir')->nullable();
-            $table->foreign('Kode_Kasir')->references('KodeKasir')->on('kasirs')->onDelete("cascade");
+            $table->string('Kode_Kasir')->nullable();
+$table->foreign('Kode_Kasir')->references('KodeKasir')->on('kasirs')->onDelete("cascade");
+
             $table->integer('JumlahBarang');
             $table->integer('HargaSatuan');
             $table->integer('Jumlah');

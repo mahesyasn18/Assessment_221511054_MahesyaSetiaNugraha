@@ -13,7 +13,7 @@ class KasirController extends Controller
     public function index()
     {
        $kasir = Kasir::get();
-        return view("barang.index", compact('kasir'));
+        return view("kasir.index", compact('kasir'));
     }
 
     /**

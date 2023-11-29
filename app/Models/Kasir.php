@@ -8,5 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Kasir extends Model
 {
     use HasFactory;
-    protected $fillable = ['KodeKasir', 'Nama','Satuan', 'HP'];
+
+    protected $primaryKey = 'KodeKasir';
+    public $incrementing = false;
+    protected $fillable = ['KodeKasir', 'Nama', 'HP'];
 }

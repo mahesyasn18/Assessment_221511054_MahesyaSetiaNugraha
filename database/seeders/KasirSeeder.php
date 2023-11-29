@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kasir;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,17 @@ class KasirSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $numberOfRecords = 2;
+
+        for ($i = 1; $i <= $numberOfRecords; $i++) {
+            // Change the values in the 'fill' method based on your requirements
+            Kasir::create([
+                'KodeKasir' => 'TK[221511054]0' . $i, // You might want to generate a unique code here
+                'Nama' => 'Mahesya Maret' . $i,
+                'HP' => '08221511054375', // Replace with the actual value for 'HP'
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
     }
 }

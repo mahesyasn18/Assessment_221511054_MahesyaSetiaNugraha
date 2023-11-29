@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('notas', function (Blueprint $table) {
             $table->id("KodeNota");
-            $table->foreignId('Kode_Tenan')->nullable();
+            $table->string('Kode_Tenan')->nullable();
             $table->foreign('Kode_Tenan')->references('KodeTenan')->on('tenans')->onDelete("cascade");
-            $table->foreignId('Kode_Kasir')->nullable();
-            $table->foreign('Kode_Kasir')->references('KodeKasir')->on('kasirs')->onDelete("cascade");
+            $table->string('Kode_Kasir')->nullable();
+$table->foreign('Kode_Kasir')->references('KodeKasir')->on('kasirs')->onDelete("cascade");
+
             $table->integer('JumlahBelanja');
             $table->integer('Diskon');
             $table->integer('Total');
