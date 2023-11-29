@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('barang_notas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('Kode_Nota')->nullable();
+            $table->string('Kode_Nota')->nullable();
             $table->foreign('Kode_Nota')->references('KodeNota')->on('notas')->onDelete("cascade");
             $table->string('Kode_Kasir')->nullable();
 $table->foreign('Kode_Kasir')->references('KodeKasir')->on('kasirs')->onDelete("cascade");

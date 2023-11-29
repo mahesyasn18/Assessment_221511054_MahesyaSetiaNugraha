@@ -13,7 +13,7 @@ class TenanSeeder extends Seeder
      */
     public function run(): void
     {
-        $numberOfRecords = 2;
+        $numberOfRecords = 5;
 
         for ($i = 1; $i <= $numberOfRecords; $i++) {
             // Change the values in the 'fill' method based on your requirements

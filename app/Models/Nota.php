@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Nota extends Model
 {
     use HasFactory;
-    protected $fillable = ['KodeBarang', 'NamaBarang','Satuan', 'HargaSatuan','Stok'];
+    protected $primaryKey = 'KodeNota';
+    public $incrementing = false;
+    protected $fillable = ['KodeNota','Kode_Tenan', 'Kode_Kasir','JumlahBelanja', 'Diskon','Total'];
 
 }

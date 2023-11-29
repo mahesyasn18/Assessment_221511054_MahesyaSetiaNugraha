@@ -3,6 +3,7 @@
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KasirController;
 use App\Http\Controllers\TenanController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,10 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BarangController::class, 'index']);
 
 Route::resource('barang', BarangController::class);
 Route::resource('kasir', KasirController::class);
 Route::resource('tenan', TenanController::class);
+Route::resource('transaksi', TransaksiController::class);
