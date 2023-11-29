@@ -18,7 +18,7 @@ class KasirSeeder extends Seeder
         for ($i = 1; $i <= $numberOfRecords; $i++) {
             // Change the values in the 'fill' method based on your requirements
             Kasir::create([
-                'KodeKasir' => 'TK[221511054]0' . $i, // You might want to generate a unique code here
+                'KodeKasir' => 'KS[221511054]0' . $i, // You might want to generate a unique code here
                 'Nama' => 'Mahesya Maret' . $i,
                 'HP' => '08221511054375', // Replace with the actual value for 'HP'
                 'created_at' => now(),
